@@ -1,0 +1,30 @@
+.sms-provider-details {
+  width:50%;
+  margin-top: 30px;
+}
+select {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.content-row-multi {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.content-row-multi button {
+  margin-right: 20px;
+}
+.error {
+  font-weight: bold;
+  font-size: 1em;
+  color: red;
+  text-align: center;
+}
+.disabled {
+  background-color: grey;
+  border-color: grey;
+}

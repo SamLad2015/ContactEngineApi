@@ -1,0 +1,46 @@
+<div class="sms-provider-details">
+  <h4>Add New Sms Provider</h4>
+  <div class="content-row">
+    <div [formGroup]="form">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input type="text" class="form-control" id="name" placeholder="Enter Name"
+               formControlName="name" aria-describedby="basic-addon3">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Country</span>
+        </div>
+        <select id="country_id" formControlName="country_id">
+          <option [ngValue]="null" disabled>Choose country</option>
+          <option *ngFor="let c of countries" [ngValue]="c.id">
+            {{ c.displayName }}
+          </option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Originating Number</span>
+        </div>
+        <input type="text" class="form-control" id="originating_number" placeholder="Enter Originating Number (Numeric)"
+               formControlName="originating_number"
+               aria-describedby="basic-addon3" pattern="[0-9 ]+">
+      </div>
+    </div>
+  </div>
+  <div class="content-row-multi">
+    <Button class="btn-primary" [class.disabled]="isFormInvalid()" [disabled]="isFormInvalid()" (click)="saveChanges()">
+      <i class="fa fa-check"></i>
+      <span> Save</span>
+    </Button>
+    <Button class="btn-danger" (click)="resetChanges()">
+      <i class="fa fa-remove"></i>
+      <span> Reset</span>
+    </Button>
+  </div>
+  <div class="content-row error">
+    {{errorMessage}}
+  </div>
+</div>

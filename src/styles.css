@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+h3, h4 {
+  border-bottom: 1px #666 solid;
+  padding:10px;
+  margin-bottom: 30px;
+}
+h4 {
+  margin-bottom: 20px;
+  border-bottom: none;
+}

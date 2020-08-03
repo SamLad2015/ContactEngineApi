@@ -1,0 +1,5 @@
+<div class="container">
+<h3>Sms Providers List</h3>
+<ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+<sms-provider [countries]="countries" (saveForm)="loadSmsProviders()"></sms-provider>
+</div>
